@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Roboto Slab');
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat';
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h4 {
+  font-family: 'Roboto Slab';
+  color: #555;
+}
+
+p {
+  font-family: 'Raleway';
+}
+
+.content-container a {
+  color: #333;
+  font-size: 40px;
+  padding: 20px 20px 0px 20px;
+}
+
+.content-container a:hover,
+.content-container a:focus {
+  color: rgb(94, 76, 141);
+}
+
+img.main-image {
+  width: 200px;
+}
+
+h4.tagline {
+  font-size: 22px;
+  color: #333;
+}
+
+.content-container {
+  padding-top: 75px;
+  text-align: center;
+}
+
+.divider {
+  width: 450px;
+  height: 15px;
+  background-color: rgb(94, 76, 141);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tooltip-inner {
+  background-color: rgb(94, 76, 141);
+  font-size: 15px;
+}
+
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: rgb(94, 76, 141);
+}

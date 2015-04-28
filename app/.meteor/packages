@@ -8,5 +8,9 @@ meteor-platform
 accounts-password
 alanning:roles
 iron:router
-sanjo:jasmine
-velocity:html-reporter
+#sanjo:jasmine
+#velocity:html-reporter
+orionjs:core
+orionjs:bootstrap
+twbs:bootstrap
+natestrauser:font-awesome

@@ -34,6 +34,12 @@ p {
 .content-container a:hover,
 .content-container a:focus {
   color: rgb(94, 76, 141);
+  text-decoration: none
+}
+
+.content-container .portfolio a {
+  font-size: 20px;
+  padding: 0;
 }
 
 img.main-image {
@@ -67,6 +73,46 @@ h4.tagline {
 
 .tooltip.bottom .tooltip-arrow {
   border-bottom-color: rgb(94, 76, 141);
+}
+
+.items-container {
+  max-width: 600px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio {
+  text-align: left;
+}
+
+.panel-default {
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(0,0,0,0.2);
+  -moz-box-shadow: 5px 5px 5px -5px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 5px -5px rgba(0,0,0,0.2);
+}
+
+.panel-default h3 {
+  color: rgb(94, 76, 141);
+}
+
+.panel-default p {
+  font-size: 16px;
+}
+
+.panel-body {
+  background-color: #eee;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+.content-container a .panel-body:hover {
+  background-color: rgb(193, 188, 208);
+}
+
+.label-default {
+  font-size: 12px;
+  background-color: rgb(94, 76, 141);
 }
 
 @media screen 

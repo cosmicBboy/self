@@ -3,8 +3,29 @@
   <div class="template-container">
 
     <div class="content-container">
-     <h1>PORTFOLIO</h1>
-     <h4 class="tagline">Things I've Built.</h4>
+      <a href="{{pathFor route='home'}}"><i class="fa fa-home"></i></a>
+      <h1>PORTFOLIO</h1>
+      <h4 class="tagline">Things I've Built.</h4>
+      <div class="divider"></div>
+
+      <div class="items-container portfolio">
+      {{#each portfolioItems}}
+        
+        <div class="panel panel-default">
+          <a href="{{anchorLink}}" target="{{#if targetBlank}}_blank{{/if}}">
+            <div class="panel-body">
+              <h3>{{title}}</h3>
+              <p>{{caption}}</p>
+              {{#each tags}}
+                <span class="label label-default">{{this}}</span>
+              {{/each}}
+            </div>
+          </a>
+        </div>
+        
+      {{/each}}
+      </div>
+
     </div>
 
   </div>

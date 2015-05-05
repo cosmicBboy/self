@@ -7,7 +7,7 @@ function tooltipHtml(n, d){ /* function to create html content string in tooltip
 }
 
 var uStates = {};
-    
+
 uStates.draw = function(id, data, toolTip){   
   function mouseOver(d){
     d3.select("#tooltip").transition().duration(200).style("opacity", .9);      
@@ -27,6 +27,8 @@ uStates.draw = function(id, data, toolTip){
     .on("mouseover", mouseOver).on("mouseout", mouseOut);
 }
 
+
+//sample data
 var sampleData ={}; /* Sample random data. */ 
 var states = ["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA",
 "ME", "NH", "VT", "NY", "NJ", "PA", "DE", "MD", "WV", "KY", "OH", 
@@ -42,6 +44,16 @@ states.forEach(function(d){
       avg:Math.round((low+mid+high)/3), color:d3.interpolate("#D5FFCF", "#1E5F16")(low/100)}; 
 });
 
+//loading real data
+var data = {};
+HTTP.get(Meteor.absoluteUrl("/data/brfss1.json"), function(err,result) {
+    jsonData = result.data;
+    states.forEach(function(d) {
+      console.log(jsonData[d]);
+    });
+});
+
+//template helpers and methods
 Template.brfss.onRendered(function () {
   /* draw states on id #statesvg */ 
   uStates.draw("#statesvg", sampleData, tooltipHtml);

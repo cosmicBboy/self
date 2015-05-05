@@ -40,6 +40,17 @@ class Transformer(object):
         self.data.insert(idx, colName, rowVals)
         return self
 
+    def renameCol(self, idx, colName):
+        self.data.columns.values[idx] = colName
+        return self
+
+    def setIndex(self, indexName):
+        '''indexName is the column name to set index to'''
+        self.data = self.data.set_index(indexName)
+        return self
+
+    def toJson(self, params):
+        return self.data.to_json(**params)
 
 if __name__ == "__main__":
     from load import Loader
@@ -48,7 +59,6 @@ if __name__ == "__main__":
     url = 'http://apps.nccd.cdc.gov/brfss/list.' \
         'asp?cat=HI&yr=2013&qkey=8671&state=All'
     attrs = {'border': 1, 'cellpadding': 5, 'cellspacing': 0}
-    header = 0
     params = {
         'url': url,
         'header': 0,
@@ -66,7 +76,7 @@ if __name__ == "__main__":
     # initiate transformer object
     transform = Transformer(data)
     transform.setTransformDictionary(jsonFp)
-    
+
     # get long values of the states
     statesDict = transform.flipTransformDictionary()
     states = statesDict.keys()
@@ -75,4 +85,14 @@ if __name__ == "__main__":
     transform.filterData(colName, states)
     statesAbbr = [statesDict[state] for state in transform.data[colName]]
     transform.addCol(1, 'StateAbbr', statesAbbr)
-    print (transform.data)
+
+    # rename column values
+    transform.renameCol(0, "State")
+
+    # set index
+    transform.setIndex('StateAbbr')
+
+    # save to json
+    fp = '../../app/public/data/brfss1.json'
+    jsonParams = {'path_or_buf': fp, 'orient': 'index'}
+    transform.toJson(jsonParams)

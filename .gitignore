@@ -1,3 +1,6 @@
+# custom app ignores
+data_science/data
+
 # Meteor Ignore Files
 .meteor/local
 .meteor/meteorite

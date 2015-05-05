@@ -14,3 +14,5 @@ orionjs:core
 orionjs:bootstrap
 twbs:bootstrap
 natestrauser:font-awesome
+d3js:d3
+nvd3:nvd3

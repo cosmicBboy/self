@@ -15,6 +15,7 @@ boilerplate-generator@1.0.3
 callback-hook@1.0.3
 check@1.0.5
 coffeescript@1.0.6
+d3js:d3@3.5.5
 dburles:collection-helpers@1.0.3
 ddp@1.1.0
 deps@1.0.7
@@ -55,6 +56,7 @@ mongo@1.1.0
 mongo-livedata@1.0.8
 natestrauser:font-awesome@4.3.0
 npm-bcrypt@0.7.8_2
+nvd3:nvd3@1.7.1
 observe-sequence@1.0.6
 ordered-dict@1.0.3
 orionjs:bootstrap@0.1.4

@@ -2,11 +2,37 @@
 <!--   <div id="chart">
       <svg></svg>
   </div> -->
-  <div id="chart">
-    <h2>{{title "UNDAF Text Mining Project"}}</h2>
-    <div class="graph-container">
-      <svg width="1000" height="600"></svg>
-    </div>
-    <!-- <button class="btn btn-default btn-lg" id="generate-data">Generate Data</button> -->
-  </div>
+  <div class="template-container">
+
+	  <div class="content-container portfolio">
+
+		  <div class="portfolio-description">
+		    <a href="{{pathFor route='home'}}"><i class="fa fa-home"></i></a>
+		    <a href="{{pathFor route='portfolio'}}"><i class="fa fa-street-view"></i></a>
+		    <div class="divider"></div>
+		    <h2>{{title "UNDAF Text Mining Project"}}</h2>
+		    <p>
+		    	The United Nations Development Assistance Framework (UNDAF) is a document that is drafted by the <a href="https://undg.org/">United Nations Development Group</a> and UN member states in order to provide a report on the development priorities of the member state. UNDAFs are meant to provide a roadmap for 3-4 year cycles to provide political backing to aid and development projects within UN member states.
+		    </p>
+		    <p>
+		    	This project aims to provide insight into these documents by performing text analysis on historical and contemporary UNDAFs. Using <a href="https://radimrehurek.com/gensim/">Gensim</a>, a powerful topic modeling package written in Python, the goal is assess how well the language of each document aligns with the language in the <a href="https://sustainabledevelopment.un.org/topics/sustainabledevelopmentgoals">sustainable development goal</a> documents.
+		    </p>
+		    <p>
+		    	Source code coming soon!
+		    </p>
+		  </div>
+
+		  <br>
+		  <br>
+
+		  <div id="chart">
+		    <div class="graph-container">
+		      <svg width="1000" height="600"></svg>
+		    </div>
+		    <!-- <button class="btn btn-default btn-lg" id="generate-data">Generate Data</button> -->
+		  </div>
+
+		</div>
+
+	</div>
 </template>

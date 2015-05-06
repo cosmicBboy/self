@@ -87,12 +87,12 @@ if __name__ == "__main__":
     transform.addCol(1, 'StateAbbr', statesAbbr)
 
     # rename column values
-    transform.renameCol(0, "State")
+    # transform.renameCol(0, "State")
 
     # set index
-    transform.setIndex('StateAbbr')
+    # transform.setIndex('StateAbbr')
 
     # save to json
-    fp = '../../app/public/data/brfss1.json'
-    jsonParams = {'path_or_buf': fp, 'orient': 'index'}
-    transform.toJson(jsonParams)
+    # fp = '../../app/public/data/brfss1.json'
+    # jsonParams = {'path_or_buf': fp, 'orient': 'index'}
+    # transform.toJson(jsonParams)

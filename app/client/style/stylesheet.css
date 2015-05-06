@@ -21,8 +21,17 @@ h4 {
   color: #555;
 }
 
-p {
+p, ul {
   font-family: 'Raleway';
+  font-size: 18px;
+}
+
+span {
+  font-family: 'Open Sans';
+}
+
+ul {
+  text-align: left;
 }
 
 .content-container a {
@@ -35,11 +44,6 @@ p {
 .content-container a:focus {
   color: rgb(94, 76, 141);
   text-decoration: none
-}
-
-.content-container .portfolio a {
-  font-size: 20px;
-  padding: 0;
 }
 
 img.main-image {
@@ -82,8 +86,33 @@ h4.tagline {
   margin-right: auto;
 }
 
-.portfolio {
+.portfolio-description,
+.chart-header {
+  width: 90%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio-description p {
+  text-align: justify;
+}
+
+.content-container.portfolio .portfolio-description p a,
+.content-container.portfolio .portfolio-description ul a {
+  font-size: 18px;
+  text-decoration: underline;
+  line-height: 35px;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+.portfolio .panel {
   text-align: left;
+}
+
+.portfolio .panel a {
+  padding: 0;
 }
 
 .panel-default {
@@ -100,10 +129,14 @@ h4.tagline {
   font-size: 16px;
 }
 
+.panel-default .tags {
+  line-height: 30px;
+}
+
 .panel-body {
   background-color: #eee;
   padding-left: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .content-container a .panel-body:hover {
@@ -113,6 +146,20 @@ h4.tagline {
 .label-default {
   font-size: 12px;
   background-color: rgb(94, 76, 141);
+}
+
+.dropdown-menu > li > a {
+  font-size: 16px;
+  line-height: 2;
+}
+
+.chart-header {
+  text-align: left;
+  max-width: 850px;
+}
+
+.chart-header .btn-group {
+  float: left;
 }
 
 @media screen 

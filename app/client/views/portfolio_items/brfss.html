@@ -1,12 +1,55 @@
 <template name="brfss">
-<!--   <div id="chart">
-      <svg></svg>
-  </div> -->
-  <div id="chart">
-    <h2>{{title "Behavioral Risk Factor Surveillance System"}}</h2>
-    <div class="graph-container">
-      <div id="tooltip"></div><!-- div to hold tooltip. -->
-      <svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
+
+  <div class="template-container">
+
+    <div class="content-container portfolio">
+
+      <div class="portfolio-description">
+        <a href="{{pathFor route='home'}}"><i class="fa fa-home"></i></a>
+        <a href="{{pathFor route='portfolio'}}"><i class="fa fa-street-view"></i></a>
+        <div class="divider"></div>
+        <h2>{{title "BEHAVIORAL RISK FACTOR SURVEILLANCE SYSTEM"}}</h2>
+        <p>
+          The main purpose of this project is to create a data product that is able visualize the behavioral risk factor surveillance data that is publicly available on the Center for Disease Control and Prevention <a href="http://www.cdc.gov/brfss/">website</a>.
+        </p>
+        <p>
+          This visualization pulls from their existing <a href="http://apps.nccd.cdc.gov/brfss/index.asp">web application</a> that makes prevalance and trends data open to the public. The three components of this project are:
+          <ul>
+            <li>Loading Data <a href="https://www.python.org/">[Python]</a></li>
+            <li>Transforming Data <a href="https://www.python.org/">[Python]</a></li>
+            <li>Visualizing Data <a href="https://www.meteor.com/">[Meteor]</a> + <a href="http://d3js.org/">[D3]</a></li>
+          </ul>
+        </p>
+        <p>
+          The source code is available <a href="https://github.com/cosmicBboy/self">here</a>.
+        </p>
+      </div>
+
+      <br>
+      <br>
+
+      <div class="chart-header">
+        <h3>{{chartTitle}}</h3>
+
+        <div class="btn-group">
+          <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+            More Survey Questions<span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            {{#each surveyQuestions}}
+            <li><a href="#" class="brfss" id="{{this.id}}">{{this.question}}</a></li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+
+      <div id="chart">
+        <div class="graph-container">
+          <div id="tooltip"></div><!-- div to hold tooltip. -->
+          <!-- <svg width="960" height="600" id="statesvg"></svg> -->
+        </div>
+      </div>
     </div>
+
   </div>
 </template>

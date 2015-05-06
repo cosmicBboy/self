@@ -173,6 +173,9 @@ chart.tooltipContent(function (key, i, e, graph) {
 });
 
 Template.undaf.onRendered(function () {
+
+  window.scroll(0, 0);
+
   nv.addGraph(function() {
 
       // chart.xAxis.tickValues(topics);
